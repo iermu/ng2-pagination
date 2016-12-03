@@ -1,0 +1,17 @@
+{
+  "name": "ng-pagination",
+  "version": "0.0.1",
+  "description": "A pagination component for angular 2",
+  "scripts": {
+    "postinstall": "typings install"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "rxjs": "^5.0.0-beta.11",
+    "core-js": "^2.4.0",
+    "@angular/core": "^2.0.0-rc.5"
+  },
+  "devDependencies": {
+    "webpack": "^1.13.2"
+  }
+}
