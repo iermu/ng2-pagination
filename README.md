@@ -1,8 +1,10 @@
 # ng2-pagination
 
 说明：
-基于angular2的分页组件
-样式文件为less，改成css也很容易。
+
+1、基于angular2的分页组件。
+2、样式文件为less，改成css也很容易。
+
 使用：
 
 ts:
