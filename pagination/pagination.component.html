@@ -1,0 +1,15 @@
+<nav class = 'zbase-ui pagination pagination-3'>
+	<p>第<span class = 'start-page'>{{startCount}}</span>-<span class = 'end-page'>{{endCount}}</span>条/<span class = 'sum-count'>{{totalCount}}</span>条</p>
+	<ul class = 'pager'>
+		<li class = 'prev over' [ngClass]= "{disabled: !previousItemValid}"><a (click)="previousPage(preItem)">上一页</a></li>
+		<li class = 'over' *ngFor = "let pageNo of pageList" [ngClass] = "{active: seletedPage == pageNo}"><a (click)="setCurrentPage(pageNo)">{{pageNo}}</a></li>
+		<li class = 'next over' [ngClass]= "{disabled: !nextItemValid}"><a (click)="nextPage(nextItem)">下一页</a></li>
+		<div class="gs-totle">
+			<p class = "totle">共<span>{{pageCount}}</span>页</p>
+			<span class = "pagego">到第</span>
+			<input type='text' name='pages' class='name' [(ngModel)]="goCurrentPage"/>
+			<span class = "pagego">页</span>
+			<a role="button" class = "pagin-button" (click) = "goPage(goCurrentPage)">确定</a>
+		</div>
+	</ul>
+</nav>

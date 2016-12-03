@@ -1,0 +1,177 @@
+@import "../../css/mixins";
+@x-public-color: #bdc3c7;
+.zbase-ui.pagination{
+	width: 100%;
+	margin:0px;
+	margin-bottom: 20px;
+	text-align: center;
+	.pager{
+		margin: 0;
+		background-color: transparent;
+		display: inline-block;
+		li{
+			border: 0px;
+			float: left;
+			display: block;
+			height: 40px;
+			text-align: center;
+			a{
+				.x-font-size(13px);
+				cursor: pointer;
+				border: 1px solid #e0e1e5;
+				border-right: 0px;
+				padding: 0;
+				color: #2c3e50;
+				float: left;
+				width: 30px;
+				line-height: 30px;
+				.x-border-radius(0px);
+				height: 30px;
+				margin-top: 1px;
+				&:hover {
+					border: 1px solid #1db1ea;
+				}
+			}
+			&.prev, &.next{
+				text-align: center;
+				margin: 0px;
+				&.disabled{
+					a{
+						color: @x-public-color;
+						border: 1px solid #e0e1e5;
+					}
+					&:hover{
+						a{
+							cursor: default;
+							color: @x-public-color;
+							border: 1px solid #e0e1e5;
+						}
+					}
+				}
+				a{
+					padding: 0px;
+					vertical-align: bottom;
+					.x-border-radius(2px);
+					width: 58px;
+					margin-top: 1px;
+					border: 1px solid #e0e1e5;
+					color: #2c3e50;
+					float: none;
+					&:hover{
+						color: #2c3e50;
+						background-color: white;
+					}
+				}
+			}
+			&.prevs, &.nexts{
+				a{
+					color: #666;
+				}
+			}
+			&.active {
+				a{
+					background-color: #1db1ea;
+					border: 1px solid #1db1ea;
+					color: white;
+				}
+			}
+			&.n{
+				margin:0 5px;
+				width: auto;
+				a{
+					padding: 1px 4px;
+				}
+				&.selected{
+					a{
+						background-color: #1db1ea;
+						color: white;
+					}
+				}
+			}
+		}
+		div.gs-totle {
+			display: inline-block;
+			p.totle, input.name {
+				display: inline-block;
+				float: none;
+			}
+			p.totle, span.pagego {
+				vertical-align: top;
+				margin-top: 8px;
+				color: @x-public-color;
+			}
+			p.totle {
+				margin-left: 14px;
+				.x-font-size(13px);
+				span {
+					.x-font-size(13px);	
+				}
+			}
+			span.pagego {
+				display: inline-block;
+				.x-font-size(13px);
+			}
+			input.name {
+				height: 30px;
+				width: 30px;
+				margin: 0px;
+				.x-font-size(13px);
+				.x-border-radius(2px);
+				color: #2c3e50;
+				text-align: center;
+				border: 1px solid #e0e1e5;
+			}
+			a.pagin-button {
+				display: inline-block;
+				vertical-align: top;
+				margin-top: 2px;
+				width: 55px;
+				height: 28px;
+				color: white;
+				.x-font-size(13px);
+				line-height: 28px;
+				.x-border-radius(4px);
+				margin-left: 6px;
+				background-color: #1db1ea;
+			}
+		}
+	}
+	&.pagination-3{
+		&>p{
+			display: block;
+			float: left;
+			color: @x-public-color;
+			.x-font-size(13px);
+			padding: 8px 0 0 10px;
+			span{
+				color: @x-public-color;
+				.x-font-size(13px);
+			}
+		}
+		.pager{
+			float: right;
+			li.prev, li.next{
+				margin: 0;
+			}
+			li.prev {
+				a {
+					border-right: 0px;
+				}
+			}
+		}
+	}
+}
+@media screen and (max-width: 850px) {
+	.zbase-ui.pagination {
+		.pager {
+			li.over {
+			}
+		}
+		&.pagination-3 {
+			&>p {
+				float: none;
+				text-align: right;
+			}
+		}
+	}
+}
